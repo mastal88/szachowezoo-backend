@@ -12,7 +12,7 @@ app.get('/health', (_req, res) => {
 app.get('/', (_req, res) => {
   res.json({
     message: 'Welcome to the Szachowe Zoo API',
-    hint: 'Update src/index.js and nodemon will reload instantly --- try it out!',
+    hint: 'Update src/index.js and nodemon will reload instantly',
   });
 });
 
