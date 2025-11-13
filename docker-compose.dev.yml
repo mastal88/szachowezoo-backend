@@ -3,6 +3,7 @@ services:
     command: npm run dev
     environment:
       NODE_ENV: development
+      MONGO_URI: ${MONGO_URI:?MONGO_URI environment variable must be set}
     volumes:
       - .:/app
       - /app/node_modules

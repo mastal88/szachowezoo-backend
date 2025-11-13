@@ -1,9 +1,10 @@
 services:
   api:
     build: .
-    command: npm run start
+    command: node dist/index.js
     ports:
       - "3000:3000"
     environment:
       NODE_ENV: production
+      MONGO_URI: ${MONGO_URI:?MONGO_URI environment variable must be set}
     restart: unless-stopped
