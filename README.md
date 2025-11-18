@@ -47,5 +47,5 @@ The base Compose file runs `npm run start` inside the image without mounting loc
 
 ```bash
 docker build -t szachowezoo-backend .
-docker run -p 3000:3000 szachowezoo-backend
+docker run --env-file .env -p 3000:3000 szachowezoo-backend
 ```
