@@ -32,6 +32,7 @@ const QuizModel: Model<QuizDocument> =
 
 export async function listQuizzes(_req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
+    console.log('/quiz endpoint called'); // eslint-disable-line no-console
     await connectDb();
     const quizzes = await QuizModel.find().lean().exec();
     res.json({ data: quizzes });
